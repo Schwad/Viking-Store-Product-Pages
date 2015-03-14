@@ -1,6 +1,6 @@
 <div class="row">
   <div class="col-md-2 centered">
-    <%= link_to "Add a product", new_product_path, class: "btn btn-default" %>
+    <%= link_to "Add a product", new_admin_product_path, class: "btn btn-default" %>
   </div>
   <div class="col-md-8">
     <h2 class="centered">
@@ -26,10 +26,10 @@
           <td><%= product.id %></td>
           <td><%= product.name %></td>
           <td><%= number_to_currency(product.price) %></td>
-          <td><%= link_to product.category.name, category_path(product.category.id) %></td>
-          <td><%= link_to "show", product_path(product.id) %></td>
-          <td><%= link_to "edit", edit_product_path(product.id) %></td>
-          <td><%= link_to "delete", product_path(product.id), data: {confirm: "Are you sure?"}, method: :delete %></td>
+          <td><%= link_to product.category.name, admin_category_path(product.category.id) %></td>
+          <td><%= link_to "show", admin_product_path(product.id) %></td>
+          <td><%= link_to "edit", edit_admin_product_path(product.id) %></td>
+          <td><%= link_to "delete", admin_product_path(product.id), data: {confirm: "Are you sure?"}, method: :delete %></td>
         </tr>
       <% end %>
     </table>

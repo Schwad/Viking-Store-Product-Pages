@@ -21,7 +21,7 @@
   </tr>
   <tr>
     <td>Category</td>
-    <td><%= link_to @product.category.name, category_path(@product.category.id) %></td>
+    <td><%= link_to @product.category.name, admin_category_path(@product.category.id) %></td>
   </tr>
 </table>
 
@@ -40,5 +40,5 @@
   </tr>
 </table>
 
-<%= link_to "Edit this product", edit_product_path(@product.id), class: "btn btn-default" %>
-<%= link_to "Delete this product", product_path(@product.id), data: {confirm: "Are you sure?"}, method: :delete, class: "btn btn-default" %>
+<%= link_to "Edit this product", edit_admin_product_path(@product.id), class: "btn btn-default" %>
+<%= link_to "Delete this product", admin_product_path(@product.id), data: {confirm: "Are you sure?"}, method: :delete, class: "btn btn-default" %>

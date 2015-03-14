@@ -1,4 +1,4 @@
-class AddressesController < ApplicationController
+class Admin::AddressesController < AdminController
   layout "admin", only: [:index, :new, :show, :edit]
   def index
     user_id = params[:user_id]
@@ -22,7 +22,7 @@ class AddressesController < ApplicationController
     @address = Address.new whitelisted_address_params
     if @address.save
       flash[:success] = "You created a new address."
-      redirect_to user_addresses_path(params[:address][:user_id])
+      redirect_to admin_user_addresses_path(params[:address][:user_id])
     else
       flash[:error] = "There is an error."
       render :new

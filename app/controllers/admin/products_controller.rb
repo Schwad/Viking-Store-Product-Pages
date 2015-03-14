@@ -1,4 +1,4 @@
-class ProductsController < ApplicationController
+class Admin::ProductsController < AdminController
 
   layout "admin", only: [:index, :new, :show, :edit]
 
@@ -19,7 +19,7 @@ class ProductsController < ApplicationController
     session[:return_to] ||= request.referer
     if @product.destroy!
       flash[:success] = "That product was deleted."
-      redirect_to products_path
+      redirect_to admin_products_path
     else
       flash[:error] = "It didn't work."
       redirect_to session.delete(:return_to)
@@ -30,7 +30,7 @@ class ProductsController < ApplicationController
     @product = Product.find params[:id]
     if @product.update whitelisted_product_params
       flash[:success] = "You successfully updated the product."
-      redirect_to products_path
+      redirect_to admin_products_path
     else
       flash[:error] = "There's an error."
       render :edit
@@ -46,7 +46,7 @@ class ProductsController < ApplicationController
     @product.sku = rand(10000000000123012301204102401204)
     if @product.save
       flash[:success] = "You created a new product."
-      redirect_to products_path
+      redirect_to admin_products_path
     else
       flash[:error] = "There was an error."
       render :new

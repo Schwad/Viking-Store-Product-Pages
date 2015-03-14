@@ -4,7 +4,7 @@
 
 <!-- collection_select(:post, :author_id, Author.all, :id, :name_with_initial, prompt: true) -->
 
-<%= form_for @product do |f| %>
+<%= form_for [:admin, @product] do |f| %>
 
   ID: <%= @product.id %>
 
@@ -20,4 +20,4 @@
   <%= f.submit %>
 <% end %>
 
-<%= link_to "Delete this product", product_path(@product.id), data: {confirm: "Are you sure?"}, method: :delete, class: "btn btn-default" %>
+<%= link_to "Delete this product", admin_product_path(@product.id), data: {confirm: "Are you sure?"}, method: :delete, class: "btn btn-default" %>

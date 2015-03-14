@@ -1,5 +1,5 @@
 <h1>Addresses</h1>
-<h3>Create new addresses from within <%= link_to "users", users_path %> profile</h3>
+<h3>Create new addresses from within <%= link_to "users", admin_users_path %> profile</h3>
 
 <table class="table table-striped">
   <tr>
@@ -17,13 +17,13 @@
   <% @addresses.each do |address| %>
   <tr>
     <td><%= address.id %></td>
-    <td><%= link_to address.user.full_name, user_path(address.user.id) %></td>
+    <td><%= link_to address.user.full_name, admin_user_path(address.user.id) %></td>
     <td><%= address.street_address %></td>
     <td><%= address.city.name %></td>
     <td><%= address.state.name %></td>
     <td><%= address.orders.count %></td>
     <td><%= address.created_at.strftime("%d %b %Y") %></td>
-    <td><%= link_to "Show", address_path(address.id) %></td>
+    <td><%= link_to "Show", admin_address_path(address.id) %></td>
     <td><%= link_to "Edit", "#" %></td>
     <td><%= link_to "Delete", "#" %></td>
   </tr>

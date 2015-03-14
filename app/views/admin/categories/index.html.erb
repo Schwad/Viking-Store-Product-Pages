@@ -1,0 +1,18 @@
+<h2 class="centered">
+  Categories
+</h2>
+
+<table class="table">
+  <% @categories.each do |category| %>
+    <tr>
+      <td><%= category.name %></td>
+      <td><%= link_to "show", admin_category_path(category.id) %></td>
+      <td><%= link_to "edit", edit_admin_category_path(category.id) %></td>
+      <td><%= link_to "delete", admin_category_path(category.id), data: {confirm: "Are you sure?"}, method: :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p>
+  <%= link_to "Add a category", new_admin_category_path %>
+</p>

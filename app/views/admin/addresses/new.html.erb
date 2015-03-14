@@ -2,7 +2,7 @@
   Create a new address
 </h2>
 
-<%= form_for @address do |f| %>
+<%= form_for [:admin, @address] do |f| %>
 
   <%= f.label :user_id %>
   <%= f.text_field :user_id, deactivated: true %>

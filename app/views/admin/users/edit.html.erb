@@ -2,7 +2,7 @@
   Edit <%= "#{@user.first_name} #{@user.last_name}." %>
 </h2>
 
-<%= form_for @user do |f| %>
+<%= form_for [:admin, @user] do |f| %>
   <%= f.label :first_name %>
   <%= f.text_field :first_name %>
 
@@ -20,6 +20,6 @@
 
   <%= f.submit %>
 
-  <%= link_to "Delete", user_path(@user.id), data: {confirm: "Are you sure?"}, method: :delete, class: "btn btn-default" %>
+  <%= link_to "Delete", admin_user_path(@user.id), data: {confirm: "Are you sure?"}, method: :delete, class: "btn btn-default" %>
 
 <% end %>

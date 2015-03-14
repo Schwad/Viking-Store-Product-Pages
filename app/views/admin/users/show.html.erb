@@ -28,11 +28,11 @@
       <td><%= shipping_address_for(@user) %></td>
     </tr>
   </table>
-  <%= link_to "Edit", edit_user_path(@user.id) %>
+  <%= link_to "Edit", edit_admin_user_path(@user.id) %>
   <br>
-  <%= link_to "Delete" , user_path(@user.id), data: {confirm: "Are you sure?"}, method: :delete %>
+  <%= link_to "Delete" , admin_user_path(@user.id), data: {confirm: "Are you sure?"}, method: :delete %>
   <br>
-  <%= link_to "View saved addresses" , user_addresses_path(@user.id) %>
+  <%= link_to "View saved addresses" , admin_user_addresses_path(@user.id) %>
   <br>
   <%= link_to "View unplaced orders" , "#" %>
 </div>
@@ -61,7 +61,7 @@
         <td><%= "#{card.exp_month}/#{card.exp_year}" %></td>
       </tr>
       <tr>
-        <td><%= link_to "Delete this card", user_credit_card_path(@user.id, card.id ), data: {confirm: "Are you sure?"}, method: :delete, class: "btn btn-default" %></td>
+        <td><%= link_to "Delete this card", admin_user_credit_card_path(@user.id, card.id ), data: {confirm: "Are you sure?"}, method: :delete, class: "btn btn-default" %></td>
       </tr>
     </table>
   </div>
@@ -69,8 +69,8 @@
 
 <div>
 <h1>Admin actions for <%= "#{@user.first_name} #{@user.last_name}" %> </h1>
-<%= link_to "Create an order", new_user_order_path(@user.id), class: "btn btn-default" %>
-<%= link_to "Create an address", new_user_address_path(@user.id), class: "btn btn-default" %>
+<%= link_to "Create an order", new_admin_user_order_path(@user.id), class: "btn btn-default" %>
+<%= link_to "Create an address", new_admin_user_address_path(@user.id), class: "btn btn-default" %>
 </div>
 
 <div>
@@ -90,9 +90,9 @@
         <td><%= order.checkout_date.strftime("%d %b %Y") unless order.checkout_date.nil? %></td>
         <td><%= number_to_currency order.value %></td>
         <td><%= order.status %></td>
-        <td><%= link_to "Show", order_path(order.id) %></td>
-        <td><%= link_to "Edit", edit_order_path(order.id) %></td>
-        <td><%= link_to "Delete", order_path(order.id), data: {confirm: "Are you sure?"}, method: :delete %></td>
+        <td><%= link_to "Show", admin_order_path(order.id) %></td>
+        <td><%= link_to "Edit", edit_admin_order_path(order.id) %></td>
+        <td><%= link_to "Delete", admin_order_path(order.id), data: {confirm: "Are you sure?"}, method: :delete %></td>
       </tr>
     <% end %>
   </table>

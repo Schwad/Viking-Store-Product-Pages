@@ -1,4 +1,4 @@
-class DashboardsController < ApplicationController
+class Admin::DashboardsController < AdminController
 
   def index
     @users_last_seven =  User.new_since 7.days.ago

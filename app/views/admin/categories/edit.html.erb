@@ -6,7 +6,7 @@
   <%= content_tag :div, message, class: "alert alert-info" %>
 <% end %>
 
-<%= form_for @category do |f| %>
+<%= form_for [:admin, @category] do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
 
@@ -16,4 +16,4 @@
   <%= f.submit "Edit" %>
 <% end %>
 
-<%= link_to "Delete this category", category_path(@category.id), data: {confirm: "Are you sure?"}, method: :delete %>
+<%= link_to "Delete this category", admin_category_path(@category.id), data: {confirm: "Are you sure?"}, method: :delete %>

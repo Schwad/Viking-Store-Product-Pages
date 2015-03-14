@@ -1,4 +1,4 @@
-class CategoriesController < ApplicationController
+class Admin::CategoriesController < AdminController
 
   layout "admin", only: [:index, :new, :show, :edit]
 
@@ -14,7 +14,7 @@ class CategoriesController < ApplicationController
     @category = Category.new whitelisted_category_params
     if @category.save
       flash[:success] = "You created a new category."
-      redirect_to categories_path
+      redirect_to admin_categories_path
     else
       flash[:error] = "There was an error."
       render :new
@@ -33,7 +33,7 @@ class CategoriesController < ApplicationController
     @category = Category.find params[:id]
     if @category.update whitelisted_category_params
       flash[:success] = "You successfully updated the category."
-      redirect_to categories_path
+      redirect_to admin_categories_path
     else
       flash[:error] = "There's an error."
       render :edit
@@ -45,7 +45,7 @@ class CategoriesController < ApplicationController
     session[:return_to] ||= request.referer
     if @category.destroy!
       flash[:success] = "That category was deleted."
-      redirect_to categories_path
+      redirect_to admin_categories_path
     else
       flash[:error] = "It didn't work."
       redirect_to session.delete(:return_to)

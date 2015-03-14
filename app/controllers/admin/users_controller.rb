@@ -19,7 +19,7 @@ class Admin::UsersController < AdminController
     @user = User.new whitelisted_user_params
     if @user.save
       flash[:success] = "You created a new user."
-      redirect_to users_path
+      redirect_to admin_users_path
     else
       flash[:error] = "There was an error."
       render :new
@@ -34,7 +34,7 @@ class Admin::UsersController < AdminController
     @user = User.find(params[:id])
     if @user.update whitelisted_user_params
       flash[:success] = "You updated this user."
-      redirect_to user_path(@user.id)
+      redirect_to admin_user_path(@user.id)
     else
       flash[:error] = "Something is wrong."
       render :edit
@@ -48,7 +48,7 @@ class Admin::UsersController < AdminController
     if @user.destroy!
       shopping_carts.destroy_all
       flash[:success] = "That user was deleted."
-      redirect_to users_path
+      redirect_to admin_users_path
     else
       flash[:error] = "It didn't work."
       redirect_to session.delete(:return_to)
