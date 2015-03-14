@@ -1,0 +1,19 @@
+<div class="row">
+  <% iterator = 0 %>
+  <% @products.each do |product| %>
+    <% if iterator % 3 == 0 %>
+      </div>
+      <br>
+      <hr width="100%">
+      <br>
+      <div class="row">
+    <% end %>
+      <div class="col-md-4">
+        <p><%= product.name %></p>
+        <p><%= product.price %></p>
+        <button><%= link_to "Add to Cart", "#" %></button>
+      </div>
+      <% iterator += 1 %>
+  <% end %>
+  </div>
+</div>
