@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :admins, only: [:index]
   resources :categories
   resources :products
+  namespace :admin do
+    resources :users
+  end
   resources :users do
     resources :credit_cards, only: [:destroy]
     resources :orders, shallow: true

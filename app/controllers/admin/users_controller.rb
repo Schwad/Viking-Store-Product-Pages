@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class Admin::UsersController < AdminController
 
   layout "admin", only: [:index, :new, :show, :edit]
 
