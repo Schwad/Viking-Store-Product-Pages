@@ -5,8 +5,15 @@
     </div>
     <div class="right-side">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Your Cart", "#" %></li>
-        <li><%= link_to "Sign In", new_session_path %> </li>
+        <li>
+          <%= link_to "Your Cart", "#" %>
+        </li>
+
+        <% if signed_in_user? %>
+         <li> <%= link_to "Sign Out", session_path, :method => "DELETE" %></li>
+        <% else %>
+          <li><%= link_to "Sign In", new_session_path %> </li>
+        <% end %>
       </ul>
     </div>
   </div>
