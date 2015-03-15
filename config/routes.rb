@@ -10,10 +10,10 @@ Rails.application.routes.draw do
     end
     resources :categories
     resources :products
-    resources :addresses, only: [:index, :new, :create]
+    resources :addresses, :only => [:index, :new, :create]
     resources :dashboards, only: [:index]
     resources :admins, only: [:index]
   end
   resources :products
-  resources :sessions
+  resource :session, :only => [:new, :create, :destroy]
 end
