@@ -5,7 +5,9 @@
       <h1> Shopping Cart Contents</h1>
     </div>
   </div>
+  <% such_total = 0 %>
   <!-- rubyness for each do -->
+  <br><br>
   <% @products.each do |product| %>
     <div class="row">
       <div class="col-md-7">
@@ -16,7 +18,7 @@
           </div>
           <div class="col-md-6">
             <p><%= product[0].name %></p>
-            <p><%= product[0].category %></p>
+            <p><%= product[0].category.name %></p>
           </div>
           <div class="col-md-3">
             <p><%= product[0].price %></p>
@@ -34,11 +36,26 @@
           <div class="col-md-6">
             <p><strong>Total price</strong></p>
             <p><%= product[0].price * product[1].to_f %></p>
+            <% such_total += (product[0].price * product[1].to_f) %>
           </div>
         </div>
       </div>
     </div>
   <% end %>
+  <div class="row">
+    <div class="col-md-7 total centered">
+      <h4><strong>Total</strong></h4>
+      <h3>$<%= such_total %></h3>
+    </div>
+    <div class="col-md-5">
+      <p><%= button_to('Update Contents', root_path, :class => 'btn btn-large btn-primary') %></p><!-- still needs path -->
+      <p><%= button_to('Check Out', root_path, :class => 'btn btn-large btn-primary') %></p> <!-- needs checkout path -->
+    </div>
+  </div>
+  <br><br>
+      
+
+      
   <!-- put end here -->
 
 <!-- BOTTOM OF PAGE ACTION -->

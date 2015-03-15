@@ -1,4 +1,5 @@
 class ShoppingCartsController < ApplicationController
+  layout "cart", only: [:index, :new, :show, :edit]
 
   def edit
   end
@@ -13,6 +14,14 @@ class ShoppingCartsController < ApplicationController
     end
   end
 
+  def update
+    if session[:shopping_cart][params[:product_id]].nil?
+      session[:shopping_cart][params[:product_id]] = 1
+    else
+      session[:shopping_cart][params[:product_id]] += 1
+    end
+  end
+
   def show
 
   end
@@ -20,8 +29,7 @@ class ShoppingCartsController < ApplicationController
   def create
   end
 
-  def update
-  end
+  
 
   def destroy
   end
