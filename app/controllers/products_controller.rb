@@ -2,7 +2,13 @@ class ProductsController < ApplicationController
   layout "user", only: [:index, :new, :show, :edit]
 
   def index
-    @products = Product.all
+    @categories = Category.all.map {|cat| [cat.name, cat.id]}
+    selection = params[:category_id]
+    if selection.nil?
+      @products = Product.all
+    else
+      @products = Product.all.where("category_id == #{selection}")
+    end
   end
 
   def show
