@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   layout "user", only: [:index, :new, :show, :edit]
 
   def index
+    session[:shopping_cart] ||= {}
     @categories = Category.all.map {|cat| [cat.name, cat.id]}
     selection = params[:category_id]
     if selection.nil?

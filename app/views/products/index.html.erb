@@ -13,11 +13,14 @@
       <br>
       <div class="row">
     <% end %>
-      <div class="col-md-4">
-        <p><%= product.name %></p>
-        <p><%= product.price %></p>
-        <button><%= link_to "Add to Cart", "#" %></button>
-      </div>
+      <%= form_tag sessions_path, :method => "post" do %>
+        <div class="col-md-4">
+          <%= hidden_field_tag("product_id", product.id) %>
+          <p><%= product.name %></p>
+          <p><%= product.price %></p>
+          <%= submit_tag("Add to cart") %>
+        </div>
+      <% end %>
       <% iterator += 1 %>
   <% end %>
   </div>
