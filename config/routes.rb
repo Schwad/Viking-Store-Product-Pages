@@ -14,6 +14,6 @@ Rails.application.routes.draw do
     resources :dashboards, only: [:index]
     resources :admins, only: [:index]
   end
-
+  resources :products
   resources :sessions
 end

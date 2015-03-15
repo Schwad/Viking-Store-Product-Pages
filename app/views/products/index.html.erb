@@ -13,7 +13,7 @@
       <br>
       <div class="row">
     <% end %>
-      <%= form_tag sessions_path, :method => "post" do %>
+      <%= form_tag products_path, :method => "post" do %>
         <div class="col-md-4">
           <%= hidden_field_tag("product_id", product.id) %>
           <p><%= product.name %></p>
