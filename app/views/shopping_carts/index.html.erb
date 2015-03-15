@@ -1,0 +1,45 @@
+<container>
+  <!-- headline -->
+  <div class="row">
+    <div class="col-md-12 centered">
+      <h1> Shopping Cart Contents</h1>
+    </div>
+  </div>
+  <!-- rubyness for each do -->
+  <% @products.each do |product| %>
+    <div class="row">
+      <div class="col-md-7">
+        <!-- product stuff -->
+        <div class="row">
+          <div class="col-md-3">
+            <!--ITEM PICTURE -->
+          </div>
+          <div class="col-md-6">
+            <p><%= product[0].name %></p>
+            <p><%= product[0].category %></p>
+          </div>
+          <div class="col-md-3">
+            <p><%= product[0].price %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-5">
+        <div class="row">
+          <div class="col-md-6">
+            <p><strong>Quantity:</strong></p>
+            <p><%= product[1] %></p>
+            <p>Remove item checkbox</p>
+          </div>
+          <div class="col-md-6">
+            <p><strong>Total price</strong></p>
+            <p><%= product[0].price * product[1].to_f %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <!-- put end here -->
+
+<!-- BOTTOM OF PAGE ACTION -->
+</container>

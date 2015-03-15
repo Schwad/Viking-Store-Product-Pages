@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   end
   resources :products
   resource :session, :only => [:new, :create, :destroy]
+  resources :shopping_carts
 end
