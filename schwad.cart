@@ -1,0 +1,98 @@
+=> [
+  [1;37m[ 0] [0m#<OrderContents:0x007f587b587818> {
+            :id[0;37m => [0m[1;34m222[0m,
+      :order_id[0;37m => [0m[1;34m42[0m,
+    :product_id[0;37m => [0m[1;34m8[0m,
+      :quantity[0;37m => [0m[1;34m9[0m,
+    :created_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:31 UTC +00:00[0m,
+    :updated_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:31 UTC +00:00[0m
+  },
+  [1;37m[ 1] [0m#<OrderContents:0x007f587b5874d0> {
+            :id[0;37m => [0m[1;34m221[0m,
+      :order_id[0;37m => [0m[1;34m42[0m,
+    :product_id[0;37m => [0m[1;34m16[0m,
+      :quantity[0;37m => [0m[1;34m8[0m,
+    :created_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:31 UTC +00:00[0m,
+    :updated_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:31 UTC +00:00[0m
+  },
+  [1;37m[ 2] [0m#<OrderContents:0x007f587b5871b0> {
+            :id[0;37m => [0m[1;34m223[0m,
+      :order_id[0;37m => [0m[1;34m42[0m,
+    :product_id[0;37m => [0m[1;34m26[0m,
+      :quantity[0;37m => [0m[1;34m7[0m,
+    :created_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:31 UTC +00:00[0m,
+    :updated_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:31 UTC +00:00[0m
+  },
+  [1;37m[ 3] [0m#<OrderContents:0x007f587b586eb8> {
+            :id[0;37m => [0m[1;34m220[0m,
+      :order_id[0;37m => [0m[1;34m42[0m,
+    :product_id[0;37m => [0m[1;34m47[0m,
+      :quantity[0;37m => [0m[1;34m10[0m,
+    :created_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:31 UTC +00:00[0m,
+    :updated_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:31 UTC +00:00[0m
+  },
+  [1;37m[ 4] [0m#<OrderContents:0x007f587b586be8> {
+            :id[0;37m => [0m[1;34m224[0m,
+      :order_id[0;37m => [0m[1;34m42[0m,
+    :product_id[0;37m => [0m[1;34m79[0m,
+      :quantity[0;37m => [0m[1;34m3[0m,
+    :created_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:31 UTC +00:00[0m,
+    :updated_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:31 UTC +00:00[0m
+  },
+  [1;37m[ 5] [0m#<OrderContents:0x007f587b586940> {
+            :id[0;37m => [0m[1;34m219[0m,
+      :order_id[0;37m => [0m[1;34m42[0m,
+    :product_id[0;37m => [0m[1;34m87[0m,
+      :quantity[0;37m => [0m[1;34m8[0m,
+    :created_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:31 UTC +00:00[0m,
+    :updated_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:31 UTC +00:00[0m
+  },
+  [1;37m[ 6] [0m#<OrderContents:0x007f587b5866c0> {
+            :id[0;37m => [0m[1;34m1014[0m,
+      :order_id[0;37m => [0m[1;34m199[0m,
+    :product_id[0;37m => [0m[1;34m1[0m,
+      :quantity[0;37m => [0m[1;34m7[0m,
+    :created_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:56 UTC +00:00[0m,
+    :updated_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:56 UTC +00:00[0m
+  },
+  [1;37m[ 7] [0m#<OrderContents:0x007f587b586468> {
+            :id[0;37m => [0m[1;34m1013[0m,
+      :order_id[0;37m => [0m[1;34m199[0m,
+    :product_id[0;37m => [0m[1;34m8[0m,
+      :quantity[0;37m => [0m[1;34m1[0m,
+    :created_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:56 UTC +00:00[0m,
+    :updated_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:56 UTC +00:00[0m
+  },
+  [1;37m[ 8] [0m#<OrderContents:0x007f587b586210> {
+            :id[0;37m => [0m[1;34m1016[0m,
+      :order_id[0;37m => [0m[1;34m199[0m,
+    :product_id[0;37m => [0m[1;34m58[0m,
+      :quantity[0;37m => [0m[1;34m8[0m,
+    :created_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:56 UTC +00:00[0m,
+    :updated_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:56 UTC +00:00[0m
+  },
+  [1;37m[ 9] [0m#<OrderContents:0x007f587b585fb8> {
+            :id[0;37m => [0m[1;34m1015[0m,
+      :order_id[0;37m => [0m[1;34m199[0m,
+    :product_id[0;37m => [0m[1;34m62[0m,
+      :quantity[0;37m => [0m[1;34m7[0m,
+    :created_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:56 UTC +00:00[0m,
+    :updated_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:56 UTC +00:00[0m
+  },
+  [1;37m[10] [0m#<OrderContents:0x007f587b585d60> {
+            :id[0;37m => [0m[1;34m1012[0m,
+      :order_id[0;37m => [0m[1;34m199[0m,
+    :product_id[0;37m => [0m[1;34m74[0m,
+      :quantity[0;37m => [0m[1;34m5[0m,
+    :created_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:56 UTC +00:00[0m,
+    :updated_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:56 UTC +00:00[0m
+  },
+  [1;37m[11] [0m#<OrderContents:0x007f587b585b08> {
+            :id[0;37m => [0m[1;34m1017[0m,
+      :order_id[0;37m => [0m[1;34m199[0m,
+    :product_id[0;37m => [0m[1;34m78[0m,
+      :quantity[0;37m => [0m[1;34m7[0m,
+    :created_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:56 UTC +00:00[0m,
+    :updated_at[0;37m => [0m[0;32mSat, 14 Mar 2015 17:39:56 UTC +00:00[0m
+  }
+]

@@ -16,6 +16,10 @@ class User < ActiveRecord::Base
     User.where("created_at > ?", time.to_date).count
   end
 
+  def cart
+    self.orders.where(:checkout_date => nil)
+  end
+
   def self.states_by_shipping_address
     User.select("states.name, COUNT(*) AS users_by_state").
       joins("JOIN addresses ON users.shipping_id = addresses.id JOIN states ON addresses.state_id = states.id").

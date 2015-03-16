@@ -10,7 +10,7 @@ class ShoppingCartsController < ApplicationController
   def index
     @products = []
     session[:shopping_cart].each do |key,value|
-      @products << [Product.find(key.to_i),value]
+      current_user.cart << OrderContents.create(:order_id => current_user.cart[0].id, :product_id => Product.find(key.to_i).id, :quantity => value.to_i)
     end
   end
 
