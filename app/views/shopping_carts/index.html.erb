@@ -8,7 +8,8 @@
   <% such_total = 0 %>
   <!-- rubyness for each do -->
   <br><br>
-  <% current_user.cart.first.order_contents.each do |oc| %>
+  <% @schwaddy = current_user.cart.first.order_contents
+  <%= form_for current_user.cart.first.order_contents do |oc_fields| %>
     <div class="row">
       <div class="col-md-7">
         <!-- product stuff -->
@@ -17,11 +18,11 @@
             <!--ITEM PICTURE -->
           </div>
           <div class="col-md-6">
-            <p><%= oc.product.name %></p>
-            <p><%= oc.product.category.name %></p>
+            <p><%= oc_fields.product.name %></p>
+            <p><%= oc_fields.product.category.name %></p>
           </div>
           <div class="col-md-3">
-            <p><%= oc.product.price %></p>
+            <p><%= oc_fields.product.price %></p>
           </div>
         </div>
       </div>
@@ -30,18 +31,19 @@
         <div class="row">
           <div class="col-md-6">
             <p><strong>Quantity:</strong></p>
-            <p><%= oc.quantity %></p>
+            <p><%= oc_fields.text_field :quantity %></p>
             <p>Remove item checkbox</p>
           </div>
           <div class="col-md-6">
             <p><strong>Total price</strong></p>
-            <p><%= oc.product.price * oc.quantity.to_f %></p>
-            <% such_total += (oc.product.price * oc.quantity.to_f) %>
+            <p><%= oc_fields.product.price * oc_fields.quantity.to_f %></p>
+            <% such_total += (oc_fields.product.price * oc_fields.quantity.to_f) %>
           </div>
         </div>
       </div>
     </div>
   <% end %>
+  <%= oc_fields.submit %>
   <div class="row">
     <div class="col-md-7 total centered">
       <h4><strong>Total</strong></h4>
